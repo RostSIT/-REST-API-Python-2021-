@@ -1,4 +1,4 @@
 import requests
 
-response = requests.get("https://playgroun.learnqa.ru/api/hello")
+response = requests.get("https://playground.learnqa.ru/api/hello")
 print(response.text)
