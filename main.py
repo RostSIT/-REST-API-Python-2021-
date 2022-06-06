@@ -1,5 +1,11 @@
 import requests
+from json.decoder import JSONDecodeError
 
-payload = {"name": "user"}
-response = requests.get("https://playground.learnqa.ru/api/hello", params=payload)
+
+response = requests.get("https://playground.learnqa.ru/api/hello")
 print(response.text)
+try:
+    parsed_response_text = response.json()
+    print(parsed_response_text)
+except JSONDecodeError:
+    print("Response is not a JSON format")
