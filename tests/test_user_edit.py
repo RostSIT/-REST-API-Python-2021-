@@ -5,6 +5,7 @@ from lib.assertions import Assertions
 
 class TestUserEdit(BaseCase):
     def test_edit_just_created_user(self):
+        # REGISTER
         register_data = self.prepare_registration_data()
         response1 = requests.post("https://playground.learnqa.ru/api/user/", data=register_data)
 
